@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/plami/CLionProjects/simple-chess/main.cpp
+C:/Users/plami/CLionProjects/simple-chess/defineBoardSize.cpp
 iostream
 -
-mainMenu.h
-C:/Users/plami/CLionProjects/simple-chess/mainMenu.h
+defineBoardSize.h
+C:/Users/plami/CLionProjects/simple-chess/defineBoardSize.h
 
-C:/Users/plami/CLionProjects/simple-chess/mainMenu.h
+C:/Users/plami/CLionProjects/simple-chess/defineBoardSize.h
 

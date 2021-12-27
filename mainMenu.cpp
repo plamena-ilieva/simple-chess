@@ -6,5 +6,5 @@ void printMainMenu() {
     cout << "1. New Game" << endl;
     cout << "2. Change board size" << endl;
     cout << "3. Exit" << endl;
-    cout << "Enter your choice: ";
+    cout << "Enter your choice:";
 }

@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/simple_chess.dir/defineBoardSize.cpp.obj"
   "CMakeFiles/simple_chess.dir/main.cpp.obj"
   "CMakeFiles/simple_chess.dir/mainMenu.cpp.obj"
   "simple_chess.exe"

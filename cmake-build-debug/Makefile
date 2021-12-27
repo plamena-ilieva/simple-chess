@@ -118,6 +118,30 @@ simple_chess\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\simple_chess.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\simple_chess.dir\build
 .PHONY : simple_chess\fast
 
+defineBoardSize.obj: defineBoardSize.cpp.obj
+.PHONY : defineBoardSize.obj
+
+# target to build an object file
+defineBoardSize.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\simple_chess.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\simple_chess.dir\defineBoardSize.cpp.obj
+.PHONY : defineBoardSize.cpp.obj
+
+defineBoardSize.i: defineBoardSize.cpp.i
+.PHONY : defineBoardSize.i
+
+# target to preprocess a source file
+defineBoardSize.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\simple_chess.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\simple_chess.dir\defineBoardSize.cpp.i
+.PHONY : defineBoardSize.cpp.i
+
+defineBoardSize.s: defineBoardSize.cpp.s
+.PHONY : defineBoardSize.s
+
+# target to generate assembly for a file
+defineBoardSize.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\simple_chess.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\simple_chess.dir\defineBoardSize.cpp.s
+.PHONY : defineBoardSize.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -175,6 +199,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... simple_chess
+	@echo ... defineBoardSize.obj
+	@echo ... defineBoardSize.i
+	@echo ... defineBoardSize.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
