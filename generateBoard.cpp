@@ -1,13 +1,13 @@
 #include <iostream>
 #include "generateBoard.h"
+#include "printBoard.h"
 #include <vector>
 #include <cstdlib>
 #include <ctime>
 
 using namespace std;
 
-void generateBoard(int size) {
-    vector<vector<char>> board;
+void generateBoard(int size, vector<vector<char>> board) {
     for (int i = 0; i < size; ++i) {
         board.emplace_back();
         for (int j = 0; j < size; ++j) {
@@ -41,16 +41,5 @@ void generateBoard(int size) {
         int y = coordinates[i] % size;
         board[x][y] = pawns[i];
     }
-    cout << "   ";
-    for (int i = 1; i <= size; ++i) {
-        cout << i << (i>9?" ":"  ");
-    }
-    cout << endl;
-    for (int i = 0; i < size; ++i) {
-        cout << i+1 << (i+1>9?" ":"  ");
-        for (int j = 0; j < size; ++j) {
-            cout << board[i][j] << "  ";
-        }
-        cout << endl;
-    }
+    printBoard(size, board);
 }

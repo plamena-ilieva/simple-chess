@@ -238,6 +238,30 @@ play.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\simple_chess.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\simple_chess.dir\play.cpp.s
 .PHONY : play.cpp.s
 
+printBoard.obj: printBoard.cpp.obj
+.PHONY : printBoard.obj
+
+# target to build an object file
+printBoard.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\simple_chess.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\simple_chess.dir\printBoard.cpp.obj
+.PHONY : printBoard.cpp.obj
+
+printBoard.i: printBoard.cpp.i
+.PHONY : printBoard.i
+
+# target to preprocess a source file
+printBoard.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\simple_chess.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\simple_chess.dir\printBoard.cpp.i
+.PHONY : printBoard.cpp.i
+
+printBoard.s: printBoard.cpp.s
+.PHONY : printBoard.s
+
+# target to generate assembly for a file
+printBoard.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\simple_chess.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\simple_chess.dir\printBoard.cpp.s
+.PHONY : printBoard.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -262,6 +286,9 @@ help:
 	@echo ... play.obj
 	@echo ... play.i
 	@echo ... play.s
+	@echo ... printBoard.obj
+	@echo ... printBoard.i
+	@echo ... printBoard.s
 .PHONY : help
 
 

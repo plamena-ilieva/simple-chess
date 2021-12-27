@@ -6,19 +6,43 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/plami/CLionProjects/simple-chess/defineBoardSize.h
-
-C:/Users/plami/CLionProjects/simple-chess/main.cpp
+C:/Users/plami/CLionProjects/simple-chess/generateBoard.cpp
 iostream
 -
-mainMenu.h
-C:/Users/plami/CLionProjects/simple-chess/mainMenu.h
-defineBoardSize.h
-C:/Users/plami/CLionProjects/simple-chess/defineBoardSize.h
+generateBoard.h
+C:/Users/plami/CLionProjects/simple-chess/generateBoard.h
+printBoard.h
+C:/Users/plami/CLionProjects/simple-chess/printBoard.h
+vector
+-
+cstdlib
+-
+ctime
+-
+
+C:/Users/plami/CLionProjects/simple-chess/generateBoard.h
+vector
+-
+
+C:/Users/plami/CLionProjects/simple-chess/play.cpp
+iostream
+-
 play.h
 C:/Users/plami/CLionProjects/simple-chess/play.h
-
-C:/Users/plami/CLionProjects/simple-chess/mainMenu.h
+generateBoard.h
+C:/Users/plami/CLionProjects/simple-chess/generateBoard.h
 
 C:/Users/plami/CLionProjects/simple-chess/play.h
+
+C:/Users/plami/CLionProjects/simple-chess/printBoard.cpp
+iostream
+-
+printBoard.h
+C:/Users/plami/CLionProjects/simple-chess/printBoard.h
+vector
+-
+
+C:/Users/plami/CLionProjects/simple-chess/printBoard.h
+vector
+-
 

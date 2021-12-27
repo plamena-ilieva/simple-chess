@@ -111,6 +111,12 @@
 		<Unit filename="C:/Users/plami/CLionProjects/simple-chess/play.h">
 			<Option target="simple_chess"/>
 		</Unit>
+		<Unit filename="C:/Users/plami/CLionProjects/simple-chess/printBoard.cpp">
+			<Option target="simple_chess"/>
+		</Unit>
+		<Unit filename="C:/Users/plami/CLionProjects/simple-chess/printBoard.h">
+			<Option target="simple_chess"/>
+		</Unit>
 		<Unit filename="C:/Users/plami/CLionProjects/simple-chess/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

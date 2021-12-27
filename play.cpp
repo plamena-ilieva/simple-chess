@@ -4,5 +4,6 @@
 using namespace std;
 
 void play(int size) {
-    generateBoard(size);
+    vector<vector<char>> board;
+    generateBoard(size, board);
 }

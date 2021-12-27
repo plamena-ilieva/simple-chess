@@ -150,13 +150,33 @@ CMakeFiles\simple_chess.dir\generateBoard.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\simple_chess.dir\generateBoard.cpp.s /c C:\Users\plami\CLionProjects\simple-chess\generateBoard.cpp
 <<
 
+CMakeFiles\simple_chess.dir\printBoard.cpp.obj: CMakeFiles\simple_chess.dir\flags.make
+CMakeFiles\simple_chess.dir\printBoard.cpp.obj: ..\printBoard.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\plami\CLionProjects\simple-chess\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/simple_chess.dir/printBoard.cpp.obj"
+	C:\PROGRA~2\MIB055~1\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\simple_chess.dir\printBoard.cpp.obj /FdCMakeFiles\simple_chess.dir\ /FS -c C:\Users\plami\CLionProjects\simple-chess\printBoard.cpp
+<<
+
+CMakeFiles\simple_chess.dir\printBoard.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simple_chess.dir/printBoard.cpp.i"
+	C:\PROGRA~2\MIB055~1\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe > CMakeFiles\simple_chess.dir\printBoard.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\plami\CLionProjects\simple-chess\printBoard.cpp
+<<
+
+CMakeFiles\simple_chess.dir\printBoard.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simple_chess.dir/printBoard.cpp.s"
+	C:\PROGRA~2\MIB055~1\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\simple_chess.dir\printBoard.cpp.s /c C:\Users\plami\CLionProjects\simple-chess\printBoard.cpp
+<<
+
 # Object files for target simple_chess
 simple_chess_OBJECTS = \
 "CMakeFiles\simple_chess.dir\main.cpp.obj" \
 "CMakeFiles\simple_chess.dir\mainMenu.cpp.obj" \
 "CMakeFiles\simple_chess.dir\defineBoardSize.cpp.obj" \
 "CMakeFiles\simple_chess.dir\play.cpp.obj" \
-"CMakeFiles\simple_chess.dir\generateBoard.cpp.obj"
+"CMakeFiles\simple_chess.dir\generateBoard.cpp.obj" \
+"CMakeFiles\simple_chess.dir\printBoard.cpp.obj"
 
 # External object files for target simple_chess
 simple_chess_EXTERNAL_OBJECTS =
@@ -166,9 +186,10 @@ simple_chess.exe: CMakeFiles\simple_chess.dir\mainMenu.cpp.obj
 simple_chess.exe: CMakeFiles\simple_chess.dir\defineBoardSize.cpp.obj
 simple_chess.exe: CMakeFiles\simple_chess.dir\play.cpp.obj
 simple_chess.exe: CMakeFiles\simple_chess.dir\generateBoard.cpp.obj
+simple_chess.exe: CMakeFiles\simple_chess.dir\printBoard.cpp.obj
 simple_chess.exe: CMakeFiles\simple_chess.dir\build.make
 simple_chess.exe: CMakeFiles\simple_chess.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\plami\CLionProjects\simple-chess\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable simple_chess.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\plami\CLionProjects\simple-chess\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable simple_chess.exe"
 	"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\simple_chess.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100177~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100177~1.0\x86\mt.exe --manifests -- C:\PROGRA~2\MIB055~1\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\simple_chess.dir\objects1.rsp @<<
  /out:simple_chess.exe /implib:simple_chess.lib /pdb:C:\Users\plami\CLionProjects\simple-chess\cmake-build-debug\simple_chess.pdb /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<

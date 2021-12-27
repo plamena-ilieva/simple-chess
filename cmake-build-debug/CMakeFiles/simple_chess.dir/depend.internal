@@ -7,6 +7,7 @@ CMakeFiles/simple_chess.dir/defineBoardSize.cpp.obj
 CMakeFiles/simple_chess.dir/generateBoard.cpp.obj
  C:/Users/plami/CLionProjects/simple-chess/generateBoard.cpp
  C:/Users/plami/CLionProjects/simple-chess/generateBoard.h
+ C:/Users/plami/CLionProjects/simple-chess/printBoard.h
 CMakeFiles/simple_chess.dir/main.cpp.obj
  C:/Users/plami/CLionProjects/simple-chess/defineBoardSize.h
  C:/Users/plami/CLionProjects/simple-chess/main.cpp
@@ -19,3 +20,6 @@ CMakeFiles/simple_chess.dir/play.cpp.obj
  C:/Users/plami/CLionProjects/simple-chess/generateBoard.h
  C:/Users/plami/CLionProjects/simple-chess/play.cpp
  C:/Users/plami/CLionProjects/simple-chess/play.h
+CMakeFiles/simple_chess.dir/printBoard.cpp.obj
+ C:/Users/plami/CLionProjects/simple-chess/printBoard.cpp
+ C:/Users/plami/CLionProjects/simple-chess/printBoard.h
