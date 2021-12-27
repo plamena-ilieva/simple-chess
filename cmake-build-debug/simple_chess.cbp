@@ -90,6 +90,12 @@
 		<Unit filename="C:/Users/plami/CLionProjects/simple-chess/defineBoardSize.h">
 			<Option target="simple_chess"/>
 		</Unit>
+		<Unit filename="C:/Users/plami/CLionProjects/simple-chess/generateBoard.cpp">
+			<Option target="simple_chess"/>
+		</Unit>
+		<Unit filename="C:/Users/plami/CLionProjects/simple-chess/generateBoard.h">
+			<Option target="simple_chess"/>
+		</Unit>
 		<Unit filename="C:/Users/plami/CLionProjects/simple-chess/main.cpp">
 			<Option target="simple_chess"/>
 		</Unit>
@@ -97,6 +103,12 @@
 			<Option target="simple_chess"/>
 		</Unit>
 		<Unit filename="C:/Users/plami/CLionProjects/simple-chess/mainMenu.h">
+			<Option target="simple_chess"/>
+		</Unit>
+		<Unit filename="C:/Users/plami/CLionProjects/simple-chess/play.cpp">
+			<Option target="simple_chess"/>
+		</Unit>
+		<Unit filename="C:/Users/plami/CLionProjects/simple-chess/play.h">
 			<Option target="simple_chess"/>
 		</Unit>
 		<Unit filename="C:/Users/plami/CLionProjects/simple-chess/CMakeLists.txt">

@@ -4,10 +4,18 @@
 CMakeFiles\simple_chess.dir\defineBoardSize.cpp.obj: ..\defineBoardSize.cpp
 CMakeFiles\simple_chess.dir\defineBoardSize.cpp.obj: ..\defineBoardSize.h
 
+CMakeFiles\simple_chess.dir\generateBoard.cpp.obj: ..\generateBoard.cpp
+CMakeFiles\simple_chess.dir\generateBoard.cpp.obj: ..\generateBoard.h
+
 CMakeFiles\simple_chess.dir\main.cpp.obj: ..\defineBoardSize.h
 CMakeFiles\simple_chess.dir\main.cpp.obj: ..\main.cpp
 CMakeFiles\simple_chess.dir\main.cpp.obj: ..\mainMenu.h
+CMakeFiles\simple_chess.dir\main.cpp.obj: ..\play.h
 
 CMakeFiles\simple_chess.dir\mainMenu.cpp.obj: ..\mainMenu.cpp
 CMakeFiles\simple_chess.dir\mainMenu.cpp.obj: ..\mainMenu.h
+
+CMakeFiles\simple_chess.dir\play.cpp.obj: ..\generateBoard.h
+CMakeFiles\simple_chess.dir\play.cpp.obj: ..\play.cpp
+CMakeFiles\simple_chess.dir\play.cpp.obj: ..\play.h
 

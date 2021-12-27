@@ -3,4 +3,4 @@ project(simple_chess)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(simple_chess main.cpp mainMenu.cpp mainMenu.h defineBoardSize.cpp defineBoardSize.h)
+add_executable(simple_chess main.cpp mainMenu.cpp mainMenu.h defineBoardSize.cpp defineBoardSize.h play.cpp play.h generateBoard.cpp generateBoard.h)

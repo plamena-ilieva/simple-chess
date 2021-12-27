@@ -9,8 +9,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/plami/CLionProjects/simple-chess/defineBoardSize.cpp" "C:/Users/plami/CLionProjects/simple-chess/cmake-build-debug/CMakeFiles/simple_chess.dir/defineBoardSize.cpp.obj"
+  "C:/Users/plami/CLionProjects/simple-chess/generateBoard.cpp" "C:/Users/plami/CLionProjects/simple-chess/cmake-build-debug/CMakeFiles/simple_chess.dir/generateBoard.cpp.obj"
   "C:/Users/plami/CLionProjects/simple-chess/main.cpp" "C:/Users/plami/CLionProjects/simple-chess/cmake-build-debug/CMakeFiles/simple_chess.dir/main.cpp.obj"
   "C:/Users/plami/CLionProjects/simple-chess/mainMenu.cpp" "C:/Users/plami/CLionProjects/simple-chess/cmake-build-debug/CMakeFiles/simple_chess.dir/mainMenu.cpp.obj"
+  "C:/Users/plami/CLionProjects/simple-chess/play.cpp" "C:/Users/plami/CLionProjects/simple-chess/cmake-build-debug/CMakeFiles/simple_chess.dir/play.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")
 

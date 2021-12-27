@@ -142,6 +142,30 @@ defineBoardSize.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\simple_chess.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\simple_chess.dir\defineBoardSize.cpp.s
 .PHONY : defineBoardSize.cpp.s
 
+generateBoard.obj: generateBoard.cpp.obj
+.PHONY : generateBoard.obj
+
+# target to build an object file
+generateBoard.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\simple_chess.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\simple_chess.dir\generateBoard.cpp.obj
+.PHONY : generateBoard.cpp.obj
+
+generateBoard.i: generateBoard.cpp.i
+.PHONY : generateBoard.i
+
+# target to preprocess a source file
+generateBoard.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\simple_chess.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\simple_chess.dir\generateBoard.cpp.i
+.PHONY : generateBoard.cpp.i
+
+generateBoard.s: generateBoard.cpp.s
+.PHONY : generateBoard.s
+
+# target to generate assembly for a file
+generateBoard.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\simple_chess.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\simple_chess.dir\generateBoard.cpp.s
+.PHONY : generateBoard.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -190,6 +214,30 @@ mainMenu.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\simple_chess.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\simple_chess.dir\mainMenu.cpp.s
 .PHONY : mainMenu.cpp.s
 
+play.obj: play.cpp.obj
+.PHONY : play.obj
+
+# target to build an object file
+play.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\simple_chess.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\simple_chess.dir\play.cpp.obj
+.PHONY : play.cpp.obj
+
+play.i: play.cpp.i
+.PHONY : play.i
+
+# target to preprocess a source file
+play.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\simple_chess.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\simple_chess.dir\play.cpp.i
+.PHONY : play.cpp.i
+
+play.s: play.cpp.s
+.PHONY : play.s
+
+# target to generate assembly for a file
+play.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\simple_chess.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\simple_chess.dir\play.cpp.s
+.PHONY : play.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -202,12 +250,18 @@ help:
 	@echo ... defineBoardSize.obj
 	@echo ... defineBoardSize.i
 	@echo ... defineBoardSize.s
+	@echo ... generateBoard.obj
+	@echo ... generateBoard.i
+	@echo ... generateBoard.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
 	@echo ... mainMenu.obj
 	@echo ... mainMenu.i
 	@echo ... mainMenu.s
+	@echo ... play.obj
+	@echo ... play.i
+	@echo ... play.s
 .PHONY : help
 
 
