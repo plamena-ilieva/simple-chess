@@ -142,6 +142,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\simple_chess.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\simple_chess.dir\main.cpp.s
 .PHONY : main.cpp.s
 
+mainMenu.obj: mainMenu.cpp.obj
+.PHONY : mainMenu.obj
+
+# target to build an object file
+mainMenu.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\simple_chess.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\simple_chess.dir\mainMenu.cpp.obj
+.PHONY : mainMenu.cpp.obj
+
+mainMenu.i: mainMenu.cpp.i
+.PHONY : mainMenu.i
+
+# target to preprocess a source file
+mainMenu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\simple_chess.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\simple_chess.dir\mainMenu.cpp.i
+.PHONY : mainMenu.cpp.i
+
+mainMenu.s: mainMenu.cpp.s
+.PHONY : mainMenu.s
+
+# target to generate assembly for a file
+mainMenu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\simple_chess.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\simple_chess.dir\mainMenu.cpp.s
+.PHONY : mainMenu.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -154,6 +178,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... mainMenu.obj
+	@echo ... mainMenu.i
+	@echo ... mainMenu.s
 .PHONY : help
 
 

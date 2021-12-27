@@ -1,0 +1,4 @@
+#ifndef SIMPLE_CHESS_MAINMENU_H
+#define SIMPLE_CHESS_MAINMENU_H
+void printMainMenu();
+#endif //SIMPLE_CHESS_MAINMENU_H

@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/simple_chess.dir/main.cpp.obj"
+  "CMakeFiles/simple_chess.dir/mainMenu.cpp.obj"
   "simple_chess.exe"
   "simple_chess.exe.manifest"
   "simple_chess.lib"

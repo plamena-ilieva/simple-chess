@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/plami/CLionProjects/simple-chess/main.cpp
+iostream
+-
+mainMenu.h
+C:/Users/plami/CLionProjects/simple-chess/mainMenu.h
+
+C:/Users/plami/CLionProjects/simple-chess/mainMenu.h
+
