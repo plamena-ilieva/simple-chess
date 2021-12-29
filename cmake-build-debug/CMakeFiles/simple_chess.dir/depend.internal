@@ -4,10 +4,17 @@
 CMakeFiles/simple_chess.dir/defineBoardSize.cpp.obj
  C:/Users/plami/CLionProjects/simple-chess/defineBoardSize.cpp
  C:/Users/plami/CLionProjects/simple-chess/defineBoardSize.h
+CMakeFiles/simple_chess.dir/findCoordinates.cpp.obj
+ C:/Users/plami/CLionProjects/simple-chess/findCoordinates.cpp
+ C:/Users/plami/CLionProjects/simple-chess/findCoordinates.h
 CMakeFiles/simple_chess.dir/generateBoard.cpp.obj
  C:/Users/plami/CLionProjects/simple-chess/generateBoard.cpp
  C:/Users/plami/CLionProjects/simple-chess/generateBoard.h
  C:/Users/plami/CLionProjects/simple-chess/printBoard.h
+CMakeFiles/simple_chess.dir/isCheckmate.cpp.obj
+ C:/Users/plami/CLionProjects/simple-chess/findCoordinates.h
+ C:/Users/plami/CLionProjects/simple-chess/isCheckmate.cpp
+ C:/Users/plami/CLionProjects/simple-chess/isCheckmate.h
 CMakeFiles/simple_chess.dir/main.cpp.obj
  C:/Users/plami/CLionProjects/simple-chess/defineBoardSize.h
  C:/Users/plami/CLionProjects/simple-chess/main.cpp
@@ -18,8 +25,10 @@ CMakeFiles/simple_chess.dir/mainMenu.cpp.obj
  C:/Users/plami/CLionProjects/simple-chess/mainMenu.h
 CMakeFiles/simple_chess.dir/play.cpp.obj
  C:/Users/plami/CLionProjects/simple-chess/generateBoard.h
+ C:/Users/plami/CLionProjects/simple-chess/isCheckmate.h
  C:/Users/plami/CLionProjects/simple-chess/play.cpp
  C:/Users/plami/CLionProjects/simple-chess/play.h
+ C:/Users/plami/CLionProjects/simple-chess/printBoard.h
 CMakeFiles/simple_chess.dir/printBoard.cpp.obj
  C:/Users/plami/CLionProjects/simple-chess/printBoard.cpp
  C:/Users/plami/CLionProjects/simple-chess/printBoard.h

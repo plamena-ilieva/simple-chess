@@ -6,43 +6,21 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/plami/CLionProjects/simple-chess/generateBoard.cpp
-iostream
--
-generateBoard.h
-C:/Users/plami/CLionProjects/simple-chess/generateBoard.h
-printBoard.h
-C:/Users/plami/CLionProjects/simple-chess/printBoard.h
-vector
--
-cstdlib
--
-ctime
--
-
-C:/Users/plami/CLionProjects/simple-chess/generateBoard.h
+C:/Users/plami/CLionProjects/simple-chess/findCoordinates.h
 vector
 -
 
-C:/Users/plami/CLionProjects/simple-chess/play.cpp
+C:/Users/plami/CLionProjects/simple-chess/isCheckmate.cpp
 iostream
 -
-play.h
-C:/Users/plami/CLionProjects/simple-chess/play.h
-generateBoard.h
-C:/Users/plami/CLionProjects/simple-chess/generateBoard.h
-
-C:/Users/plami/CLionProjects/simple-chess/play.h
-
-C:/Users/plami/CLionProjects/simple-chess/printBoard.cpp
-iostream
--
-printBoard.h
-C:/Users/plami/CLionProjects/simple-chess/printBoard.h
 vector
 -
+isCheckmate.h
+C:/Users/plami/CLionProjects/simple-chess/isCheckmate.h
+findCoordinates.h
+C:/Users/plami/CLionProjects/simple-chess/findCoordinates.h
 
-C:/Users/plami/CLionProjects/simple-chess/printBoard.h
+C:/Users/plami/CLionProjects/simple-chess/isCheckmate.h
 vector
 -
 

@@ -142,6 +142,30 @@ defineBoardSize.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\simple_chess.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\simple_chess.dir\defineBoardSize.cpp.s
 .PHONY : defineBoardSize.cpp.s
 
+findCoordinates.obj: findCoordinates.cpp.obj
+.PHONY : findCoordinates.obj
+
+# target to build an object file
+findCoordinates.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\simple_chess.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\simple_chess.dir\findCoordinates.cpp.obj
+.PHONY : findCoordinates.cpp.obj
+
+findCoordinates.i: findCoordinates.cpp.i
+.PHONY : findCoordinates.i
+
+# target to preprocess a source file
+findCoordinates.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\simple_chess.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\simple_chess.dir\findCoordinates.cpp.i
+.PHONY : findCoordinates.cpp.i
+
+findCoordinates.s: findCoordinates.cpp.s
+.PHONY : findCoordinates.s
+
+# target to generate assembly for a file
+findCoordinates.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\simple_chess.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\simple_chess.dir\findCoordinates.cpp.s
+.PHONY : findCoordinates.cpp.s
+
 generateBoard.obj: generateBoard.cpp.obj
 .PHONY : generateBoard.obj
 
@@ -165,6 +189,30 @@ generateBoard.s: generateBoard.cpp.s
 generateBoard.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\simple_chess.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\simple_chess.dir\generateBoard.cpp.s
 .PHONY : generateBoard.cpp.s
+
+isCheckmate.obj: isCheckmate.cpp.obj
+.PHONY : isCheckmate.obj
+
+# target to build an object file
+isCheckmate.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\simple_chess.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\simple_chess.dir\isCheckmate.cpp.obj
+.PHONY : isCheckmate.cpp.obj
+
+isCheckmate.i: isCheckmate.cpp.i
+.PHONY : isCheckmate.i
+
+# target to preprocess a source file
+isCheckmate.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\simple_chess.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\simple_chess.dir\isCheckmate.cpp.i
+.PHONY : isCheckmate.cpp.i
+
+isCheckmate.s: isCheckmate.cpp.s
+.PHONY : isCheckmate.s
+
+# target to generate assembly for a file
+isCheckmate.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\simple_chess.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\simple_chess.dir\isCheckmate.cpp.s
+.PHONY : isCheckmate.cpp.s
 
 main.obj: main.cpp.obj
 .PHONY : main.obj
@@ -274,9 +322,15 @@ help:
 	@echo ... defineBoardSize.obj
 	@echo ... defineBoardSize.i
 	@echo ... defineBoardSize.s
+	@echo ... findCoordinates.obj
+	@echo ... findCoordinates.i
+	@echo ... findCoordinates.s
 	@echo ... generateBoard.obj
 	@echo ... generateBoard.i
 	@echo ... generateBoard.s
+	@echo ... isCheckmate.obj
+	@echo ... isCheckmate.i
+	@echo ... isCheckmate.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

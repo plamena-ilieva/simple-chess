@@ -4,9 +4,16 @@
 CMakeFiles\simple_chess.dir\defineBoardSize.cpp.obj: ..\defineBoardSize.cpp
 CMakeFiles\simple_chess.dir\defineBoardSize.cpp.obj: ..\defineBoardSize.h
 
+CMakeFiles\simple_chess.dir\findCoordinates.cpp.obj: ..\findCoordinates.cpp
+CMakeFiles\simple_chess.dir\findCoordinates.cpp.obj: ..\findCoordinates.h
+
 CMakeFiles\simple_chess.dir\generateBoard.cpp.obj: ..\generateBoard.cpp
 CMakeFiles\simple_chess.dir\generateBoard.cpp.obj: ..\generateBoard.h
 CMakeFiles\simple_chess.dir\generateBoard.cpp.obj: ..\printBoard.h
+
+CMakeFiles\simple_chess.dir\isCheckmate.cpp.obj: ..\findCoordinates.h
+CMakeFiles\simple_chess.dir\isCheckmate.cpp.obj: ..\isCheckmate.cpp
+CMakeFiles\simple_chess.dir\isCheckmate.cpp.obj: ..\isCheckmate.h
 
 CMakeFiles\simple_chess.dir\main.cpp.obj: ..\defineBoardSize.h
 CMakeFiles\simple_chess.dir\main.cpp.obj: ..\main.cpp
@@ -17,8 +24,10 @@ CMakeFiles\simple_chess.dir\mainMenu.cpp.obj: ..\mainMenu.cpp
 CMakeFiles\simple_chess.dir\mainMenu.cpp.obj: ..\mainMenu.h
 
 CMakeFiles\simple_chess.dir\play.cpp.obj: ..\generateBoard.h
+CMakeFiles\simple_chess.dir\play.cpp.obj: ..\isCheckmate.h
 CMakeFiles\simple_chess.dir\play.cpp.obj: ..\play.cpp
 CMakeFiles\simple_chess.dir\play.cpp.obj: ..\play.h
+CMakeFiles\simple_chess.dir\play.cpp.obj: ..\printBoard.h
 
 CMakeFiles\simple_chess.dir\printBoard.cpp.obj: ..\printBoard.cpp
 CMakeFiles\simple_chess.dir\printBoard.cpp.obj: ..\printBoard.h

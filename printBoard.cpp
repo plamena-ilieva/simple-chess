@@ -3,7 +3,7 @@
 #include <vector>
 using namespace std;
 
-void printBoard(int size, vector<vector<char>> board) {
+void printBoard(int size, vector<vector<char>> &board) {
     cout << "   ";
     for (int i = 1; i <= size; ++i) {
         cout << i << (i>9?" ":"  ");

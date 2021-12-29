@@ -90,10 +90,22 @@
 		<Unit filename="C:/Users/plami/CLionProjects/simple-chess/defineBoardSize.h">
 			<Option target="simple_chess"/>
 		</Unit>
+		<Unit filename="C:/Users/plami/CLionProjects/simple-chess/findCoordinates.cpp">
+			<Option target="simple_chess"/>
+		</Unit>
+		<Unit filename="C:/Users/plami/CLionProjects/simple-chess/findCoordinates.h">
+			<Option target="simple_chess"/>
+		</Unit>
 		<Unit filename="C:/Users/plami/CLionProjects/simple-chess/generateBoard.cpp">
 			<Option target="simple_chess"/>
 		</Unit>
 		<Unit filename="C:/Users/plami/CLionProjects/simple-chess/generateBoard.h">
+			<Option target="simple_chess"/>
+		</Unit>
+		<Unit filename="C:/Users/plami/CLionProjects/simple-chess/isCheckmate.cpp">
+			<Option target="simple_chess"/>
+		</Unit>
+		<Unit filename="C:/Users/plami/CLionProjects/simple-chess/isCheckmate.h">
 			<Option target="simple_chess"/>
 		</Unit>
 		<Unit filename="C:/Users/plami/CLionProjects/simple-chess/main.cpp">

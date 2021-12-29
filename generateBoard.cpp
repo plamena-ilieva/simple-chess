@@ -7,7 +7,7 @@
 
 using namespace std;
 
-void generateBoard(int size, vector<vector<char>> board) {
+void generateBoard(int size, vector<vector<char>> &board) {
     for (int i = 0; i < size; ++i) {
         board.emplace_back();
         for (int j = 0; j < size; ++j) {
@@ -41,5 +41,9 @@ void generateBoard(int size, vector<vector<char>> board) {
         int y = coordinates[i] % size;
         board[x][y] = pawns[i];
     }
+    cout << "K - your king" << endl;
+    cout << "1 - your first rook" << endl;
+    cout << "2 - your second rook" << endl;
+    cout << "P - bot's king" << endl;
     printBoard(size, board);
 }
