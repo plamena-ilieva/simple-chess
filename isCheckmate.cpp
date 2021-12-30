@@ -1,8 +1,9 @@
 #include <iostream>
 #include <vector>
-using namespace std;
 #include "isCheckmate.h"
 #include "findCoordinates.h"
+#include "containsObstacles.h"
+using namespace std;
 
 bool isCheckmate(int size, vector<vector<char>> &board) {
     cout << "Enter your move:";
@@ -11,6 +12,7 @@ bool isCheckmate(int size, vector<vector<char>> &board) {
     cin >> pawn >> x >> y;
     --x;
     --y;
+    int newCoordinates[2] = {x,y};
     while (true) {
         int *coordinates = findCoordinates(pawn, size, board);
         if (coordinates[0] == -1 || pawn == 'P') {
@@ -19,9 +21,10 @@ bool isCheckmate(int size, vector<vector<char>> &board) {
         else if (x < 0 || x>=size || y < 0 || y>=size){
             cout << "Enter existing coordinates!";
         }
-        else if ((pawn == 'K' && abs(coordinates[0]-x)<=1 && //correct for king
+        else if (((pawn == 'K' && abs(coordinates[0]-x)<=1 && //correct for king
                     abs(coordinates[1]-y)<=1) ||
-                    (coordinates[0]==x || coordinates[1]==y)) { //correct for rook
+                    (coordinates[0]==x || coordinates[1]==y)) && //correct for rook
+                    !containsObstacles(board, coordinates, newCoordinates)) {
             if (board[x][y]=='P'){
                 cout << "Checkmate!";
                 return true;
@@ -37,6 +40,8 @@ bool isCheckmate(int size, vector<vector<char>> &board) {
         cin >> pawn >> x >> y;
         --x;
         --y;
+        newCoordinates[0] = x;
+        newCoordinates[1] = y;
     }
     return false;
 }

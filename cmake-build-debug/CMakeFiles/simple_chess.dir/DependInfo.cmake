@@ -8,6 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/plami/CLionProjects/simple-chess/botMove.cpp" "C:/Users/plami/CLionProjects/simple-chess/cmake-build-debug/CMakeFiles/simple_chess.dir/botMove.cpp.obj"
+  "C:/Users/plami/CLionProjects/simple-chess/containsObstacles.cpp" "C:/Users/plami/CLionProjects/simple-chess/cmake-build-debug/CMakeFiles/simple_chess.dir/containsObstacles.cpp.obj"
   "C:/Users/plami/CLionProjects/simple-chess/defineBoardSize.cpp" "C:/Users/plami/CLionProjects/simple-chess/cmake-build-debug/CMakeFiles/simple_chess.dir/defineBoardSize.cpp.obj"
   "C:/Users/plami/CLionProjects/simple-chess/findCoordinates.cpp" "C:/Users/plami/CLionProjects/simple-chess/cmake-build-debug/CMakeFiles/simple_chess.dir/findCoordinates.cpp.obj"
   "C:/Users/plami/CLionProjects/simple-chess/generateBoard.cpp" "C:/Users/plami/CLionProjects/simple-chess/cmake-build-debug/CMakeFiles/simple_chess.dir/generateBoard.cpp.obj"

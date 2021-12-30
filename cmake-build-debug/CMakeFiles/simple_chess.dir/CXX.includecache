@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/plami/CLionProjects/simple-chess/containsObstacles.h
+vector
+-
+
 C:/Users/plami/CLionProjects/simple-chess/findCoordinates.h
 vector
 -
@@ -19,6 +23,8 @@ isCheckmate.h
 C:/Users/plami/CLionProjects/simple-chess/isCheckmate.h
 findCoordinates.h
 C:/Users/plami/CLionProjects/simple-chess/findCoordinates.h
+containsObstacles.h
+C:/Users/plami/CLionProjects/simple-chess/containsObstacles.h
 
 C:/Users/plami/CLionProjects/simple-chess/isCheckmate.h
 vector

@@ -84,6 +84,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/plami/CLionProjects/simple-chess/botMove.cpp">
+			<Option target="simple_chess"/>
+		</Unit>
+		<Unit filename="C:/Users/plami/CLionProjects/simple-chess/botMove.h">
+			<Option target="simple_chess"/>
+		</Unit>
+		<Unit filename="C:/Users/plami/CLionProjects/simple-chess/containsObstacles.cpp">
+			<Option target="simple_chess"/>
+		</Unit>
+		<Unit filename="C:/Users/plami/CLionProjects/simple-chess/containsObstacles.h">
+			<Option target="simple_chess"/>
+		</Unit>
 		<Unit filename="C:/Users/plami/CLionProjects/simple-chess/defineBoardSize.cpp">
 			<Option target="simple_chess"/>
 		</Unit>

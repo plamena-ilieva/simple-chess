@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/simple_chess.dir/botMove.cpp.obj"
+  "CMakeFiles/simple_chess.dir/containsObstacles.cpp.obj"
   "CMakeFiles/simple_chess.dir/defineBoardSize.cpp.obj"
   "CMakeFiles/simple_chess.dir/findCoordinates.cpp.obj"
   "CMakeFiles/simple_chess.dir/generateBoard.cpp.obj"

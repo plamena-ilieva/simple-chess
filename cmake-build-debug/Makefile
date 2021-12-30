@@ -118,6 +118,54 @@ simple_chess\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\simple_chess.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\simple_chess.dir\build
 .PHONY : simple_chess\fast
 
+botMove.obj: botMove.cpp.obj
+.PHONY : botMove.obj
+
+# target to build an object file
+botMove.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\simple_chess.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\simple_chess.dir\botMove.cpp.obj
+.PHONY : botMove.cpp.obj
+
+botMove.i: botMove.cpp.i
+.PHONY : botMove.i
+
+# target to preprocess a source file
+botMove.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\simple_chess.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\simple_chess.dir\botMove.cpp.i
+.PHONY : botMove.cpp.i
+
+botMove.s: botMove.cpp.s
+.PHONY : botMove.s
+
+# target to generate assembly for a file
+botMove.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\simple_chess.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\simple_chess.dir\botMove.cpp.s
+.PHONY : botMove.cpp.s
+
+containsObstacles.obj: containsObstacles.cpp.obj
+.PHONY : containsObstacles.obj
+
+# target to build an object file
+containsObstacles.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\simple_chess.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\simple_chess.dir\containsObstacles.cpp.obj
+.PHONY : containsObstacles.cpp.obj
+
+containsObstacles.i: containsObstacles.cpp.i
+.PHONY : containsObstacles.i
+
+# target to preprocess a source file
+containsObstacles.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\simple_chess.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\simple_chess.dir\containsObstacles.cpp.i
+.PHONY : containsObstacles.cpp.i
+
+containsObstacles.s: containsObstacles.cpp.s
+.PHONY : containsObstacles.s
+
+# target to generate assembly for a file
+containsObstacles.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\simple_chess.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\simple_chess.dir\containsObstacles.cpp.s
+.PHONY : containsObstacles.cpp.s
+
 defineBoardSize.obj: defineBoardSize.cpp.obj
 .PHONY : defineBoardSize.obj
 
@@ -319,6 +367,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... simple_chess
+	@echo ... botMove.obj
+	@echo ... botMove.i
+	@echo ... botMove.s
+	@echo ... containsObstacles.obj
+	@echo ... containsObstacles.i
+	@echo ... containsObstacles.s
 	@echo ... defineBoardSize.obj
 	@echo ... defineBoardSize.i
 	@echo ... defineBoardSize.s
