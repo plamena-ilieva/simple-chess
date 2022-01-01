@@ -24,6 +24,7 @@ CMakeFiles\simple_chess.dir\isCheckmate.cpp.obj: ..\containsObstacles.h
 CMakeFiles\simple_chess.dir\isCheckmate.cpp.obj: ..\findCoordinates.h
 CMakeFiles\simple_chess.dir\isCheckmate.cpp.obj: ..\isCheckmate.cpp
 CMakeFiles\simple_chess.dir\isCheckmate.cpp.obj: ..\isCheckmate.h
+CMakeFiles\simple_chess.dir\isCheckmate.cpp.obj: ..\printBoard.h
 
 CMakeFiles\simple_chess.dir\main.cpp.obj: ..\defineBoardSize.h
 CMakeFiles\simple_chess.dir\main.cpp.obj: ..\main.cpp

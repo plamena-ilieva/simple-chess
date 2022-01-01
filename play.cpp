@@ -1,4 +1,5 @@
 #include <iostream>
+#include <Windows.h>
 #include "play.h"
 #include "generateBoard.h"
 #include "isCheckmate.h"
@@ -10,19 +11,28 @@ void play(int size) {
     vector<vector<char>> board;
     generateBoard(size, board);
     int moves = 0;
-    bool hasNotLost = true;
-    while(!isCheckmate(size, board)) {
-        ++moves;
-        printBoard(size, board);
-        if(botMove(size, board)){
-            printBoard(size, board);
-            cout << "You lost!" << endl;
-            hasNotLost = false;
-            break;
+    while(true) {
+        switch (isCheckmate(size, board)) {
+            case 1:
+                cout << "You won!" << endl;
+                cout << "Moves: " << moves << endl;
+                return;
+            case 0:
+                ++moves;
+                printBoard(size, board);
+                Sleep(2000);
+                cout << endl;
+                if(botMove(size, board)){
+                    printBoard(size, board);
+                    cout << "You lost!" << endl;
+                    cout << "Moves: " << moves << endl;
+                    return;
+                }
+                break;
+            case -1:
+                return;
+            default:
+                break;
         }
     }
-    if (hasNotLost) {
-        cout << "You won!" << endl;
-    }
-    cout << "Moves: " << moves << endl;
 }
