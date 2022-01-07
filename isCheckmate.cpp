@@ -7,6 +7,7 @@
 using namespace std;
 
 int isCheckmate(int size, vector<vector<char>> &board) {
+    int *coordinates = new int[2];
     while (true) {
         cout << "Enter your move:";
         char pawn;
@@ -20,6 +21,7 @@ int isCheckmate(int size, vector<vector<char>> &board) {
         }
 
         if (input[0] == 'X') {
+            delete[] coordinates;
             return -1;
         }
         if ((input[0] !='K' && input[0] !='1' && input[0] !='2') ||
@@ -57,7 +59,7 @@ int isCheckmate(int size, vector<vector<char>> &board) {
         }
 
         int newCoordinates[2] = {x,y};
-        int *coordinates = findCoordinates(pawn, size, board);
+        coordinates = findCoordinates(pawn, size, board);
         if (coordinates[0] == -1 || pawn == 'P') {
             cout << "Enter an existing pawn!" << endl;
         }
@@ -71,6 +73,7 @@ int isCheckmate(int size, vector<vector<char>> &board) {
             if (board[x][y]=='P'){
                 printBoard(size, board);
                 cout << "Checkmate!";
+                delete[] coordinates;
                 return 1;
             }
             board[coordinates[0]][coordinates[1]] = '_';
@@ -81,5 +84,6 @@ int isCheckmate(int size, vector<vector<char>> &board) {
             cout << "Enter correct coordinates for " << pawn << "!";
         }
     }
+    delete[] coordinates;
     return 0;
 }

@@ -18,6 +18,10 @@ bool botMove(int size, vector<vector<char>> &board){
         board[coordinatesK[0]][coordinatesK[1]] = 'P';
         board[coordinatesP[0]][coordinatesP[1]] = '_';
         printBoard(size, board);
+        delete[] coordinates1;
+        delete[] coordinates2;
+        delete[] coordinatesK;
+        delete[] coordinatesP;
         return true;
     }
 
@@ -30,6 +34,10 @@ bool botMove(int size, vector<vector<char>> &board){
         board[coordinates1[0]][coordinates1[1]] = 'P';
         board[coordinatesP[0]][coordinatesP[1]] = '_';
         printBoard(size, board);
+        delete[] coordinates1;
+        delete[] coordinates2;
+        delete[] coordinatesK;
+        delete[] coordinatesP;
         return false;
     }
 
@@ -42,6 +50,10 @@ bool botMove(int size, vector<vector<char>> &board){
         board[coordinates2[0]][coordinates2[1]] = 'P';
         board[coordinatesP[0]][coordinatesP[1]] = '_';
         printBoard(size, board);
+        delete[] coordinates1;
+        delete[] coordinates2;
+        delete[] coordinatesK;
+        delete[] coordinatesP;
         return false;
     }
 
@@ -140,5 +152,10 @@ bool botMove(int size, vector<vector<char>> &board){
     board[coordinatesP[0]][coordinatesP[1]]='_';
     board[newCoordinatesP[0]][newCoordinatesP[1]]='P';
     printBoard(size, board);
+    delete[] coordinates1;
+    delete[] coordinates2;
+    delete[] coordinatesK;
+    delete[] coordinatesP;
+    delete[] newCoordinatesP;
     return false;
 }
