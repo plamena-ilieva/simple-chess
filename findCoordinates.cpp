@@ -7,7 +7,7 @@ int* findCoordinates(char pawn, int size, vector<vector<char>> &board) {
     coordinates[0] = coordinates[1] = -1;
     for (int i = 0; i < size; ++i) {
         for (int j = 0; j < size; ++j) {
-            if (board[i][j]==pawn){
+            if (board[i][j] == pawn){
                 coordinates[0] = i;
                 coordinates[1] = j;
                 return coordinates;

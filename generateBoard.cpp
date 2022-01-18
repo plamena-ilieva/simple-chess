@@ -10,7 +10,7 @@ using namespace std;
 
 void generateBoard(int size, vector<vector<char>> &board) {
     fstream file;
-    file.open("log.txt", fstream::out);
+    file.open("coordinates.txt", fstream::out);
 
     for (int i = 0; i < size; ++i) {
         board.emplace_back();
@@ -26,21 +26,21 @@ void generateBoard(int size, vector<vector<char>> &board) {
         item = rand() % (size*size);
     }
 
-    int diffBetweenKings = abs(coordinates[1]-coordinates[0]);
+    int diffBetweenKings = abs(coordinates[1] - coordinates[0]);
     while (diffBetweenKings <= 1 || diffBetweenKings == size ||
-           diffBetweenKings == size+1 || diffBetweenKings == size-1) {
+           diffBetweenKings == size + 1 || diffBetweenKings == size - 1) {
         coordinates[1] = rand() % (size*size);
         diffBetweenKings = abs(coordinates[1]-coordinates[0]);
     }
     while (coordinates[2] / size == coordinates[0] / size ||
                coordinates[2] % size == coordinates[0] % size ||
-               coordinates[1]==coordinates[2]){
+               coordinates[1] == coordinates[2]){
             coordinates[2] = rand() % (size*size);
     }
     while (coordinates[3] / size == coordinates[0] / size ||
             coordinates[3] % size == coordinates[0] % size ||
-            coordinates[1]==coordinates[3]||
-            coordinates[2]==coordinates[3]){
+            coordinates[1] == coordinates[3] ||
+            coordinates[2] == coordinates[3]) {
         coordinates[3] = rand() % (size*size);
     }
 

@@ -7,131 +7,182 @@
 #include <ctime>
 using namespace std;
 
+void remove(char *positions, int index, int &count) {
+    positions[index] = positions[count-1];
+    positions[count-1] = '\0';
+    --count;
+}
+
 bool botMove(int size, vector<vector<char>> &board){
     int* coordinates1 = findCoordinates('1', size, board);
     int* coordinates2 = findCoordinates('2', size, board);
     int* coordinatesK = findCoordinates('K', size, board);
     int* coordinatesP = findCoordinates('P', size, board);
 
-    if (abs(coordinatesK[0]-coordinatesP[0])<=1 &&
-        abs(coordinatesK[1]-coordinatesP[1])<=1){
-        board[coordinatesK[0]][coordinatesK[1]] = 'P';
-        board[coordinatesP[0]][coordinatesP[1]] = '_';
-        printBoard(size, board);
-        delete[] coordinates1;
-        delete[] coordinates2;
-        delete[] coordinatesK;
-        delete[] coordinatesP;
-        return true;
+    char positions[8] = {'0', '1', '2', '3', '4', '5', '6', '7'};
+    int count = 8;
+
+    if ((abs(coordinatesP[0] + 1 - coordinatesK[0]) <= 1 &&
+         abs(coordinatesP[1] + 1 - coordinatesK[1]) <= 1) ||
+        (coordinatesP[0]+1 >= size || coordinatesP[1]+1 >= size)) {
+        remove(positions, 7, count);
     }
 
-    if (abs(coordinates1[0]-coordinatesP[0])<=1 &&
-            abs(coordinates1[1]-coordinatesP[1])<=1 &&
+    if ((abs(coordinatesP[0] + 1 - coordinatesK[0]) <= 1 &&
+         abs(coordinatesP[1] - coordinatesK[1]) <= 1) ||
+        (coordinatesP[0] + 1 >= size)) {
+        remove(positions, 6, count);
+    }
+
+    if ((abs(coordinatesP[0] + 1 - coordinatesK[0]) <= 1 &&
+         abs(coordinatesP[1] - 1 - coordinatesK[1]) <= 1) ||
+        (coordinatesP[0] + 1 >= size || coordinatesP[1] - 1 < 0)) {
+        remove(positions, 5, count);
+    }
+
+    if ((abs(coordinatesP[0] - coordinatesK[0]) <= 1 &&
+            abs(coordinatesP[1] + 1 - coordinatesK[1]) <= 1) ||
+            (coordinatesP[1] + 1 >= size)) {
+        remove(positions, 4, count);
+    }
+
+    if ((abs(coordinatesP[0] - coordinatesK[0]) <= 1 &&
+         abs(coordinatesP[1] - 1 - coordinatesK[1]) <= 1) ||
+        (coordinatesP[1] - 1 < 0)) {
+        remove(positions, 3, count);
+    }
+
+    if ((abs(coordinatesP[0] - 1 - coordinatesK[0]) <= 1 &&
+         abs(coordinatesP[1] + 1 - coordinatesK[1]) <= 1) ||
+        (coordinatesP[0] - 1 < 0 || coordinatesP[1] + 1 >= size)) {
+        remove(positions, 2, count);
+    }
+
+    if ((abs(coordinatesP[0] - 1 - coordinatesK[0]) <= 1 &&
+         abs(coordinatesP[1] - coordinatesK[1]) <= 1) ||
+        (coordinatesP[0] - 1 < 0)) {
+        remove(positions, 1, count);
+    }
+
+    if ((abs(coordinatesP[0] - 1 - coordinatesK[0]) <= 1 &&
+         abs(coordinatesP[1] - 1 - coordinatesK[1]) <= 1) ||
+        (coordinatesP[0] - 1 < 0 || coordinatesP[1] - 1 < 0)) {
+        remove(positions, 0, count);
+    }
+
+    if (coordinates1[0] != -1 &&
+            (abs(coordinates1[0] - coordinatesP[0]) <= 1 &&
+            abs(coordinates1[1] - coordinatesP[1]) <= 1 &&
             coordinates1[0] != coordinates2[0] &&
             coordinates1[1] != coordinates2[1] &&
-            !(abs(coordinatesK[0]-coordinates1[0])<=1 &&
-            abs(coordinatesK[1]-coordinates1[1])<=1)){
+            !(abs(coordinatesK[0] - coordinates1[0]) <= 1 &&
+            abs(coordinatesK[1] - coordinates1[1]) <= 1))) {
         board[coordinates1[0]][coordinates1[1]] = 'P';
         board[coordinatesP[0]][coordinatesP[1]] = '_';
         printBoard(size, board);
         delete[] coordinates1;
-        delete[] coordinates2;
         delete[] coordinatesK;
         delete[] coordinatesP;
+        if (coordinates2[0] == -1) {
+            delete[] coordinates2;
+            return true;
+        }
+        delete[] coordinates2;
         return false;
     }
 
-    if (abs(coordinates2[0]-coordinatesP[0])<=1 &&
-        abs(coordinates2[1]-coordinatesP[1])<=1 &&
-        coordinates1[0] != coordinates2[0] &&
-        coordinates1[1] != coordinates2[1] &&
-        !(abs(coordinatesK[0]-coordinates2[0])<=1 &&
-          abs(coordinatesK[1]-coordinates2[1])<=1)){
+    if (coordinates2[0] != -1 &&
+            (abs(coordinates2[0] - coordinatesP[0]) <= 1 &&
+            abs(coordinates2[1] - coordinatesP[1]) <= 1 &&
+            coordinates1[0] != coordinates2[0] &&
+            coordinates1[1] != coordinates2[1] &&
+            !(abs(coordinatesK[0] - coordinates2[0]) <= 1 &&
+            abs(coordinatesK[1]-coordinates2[1]) <= 1))) {
         board[coordinates2[0]][coordinates2[1]] = 'P';
         board[coordinatesP[0]][coordinatesP[1]] = '_';
         printBoard(size, board);
-        delete[] coordinates1;
         delete[] coordinates2;
         delete[] coordinatesK;
         delete[] coordinatesP;
+        if (coordinates1[0] == -1) {
+            delete[] coordinates1;
+            return true;
+        }
+        delete[] coordinates1;
         return false;
     }
 
     int* newCoordinatesP = new int[2];
-    int count = 8;
-    char positions[8] = {'0', '1', '2', '3', '4', '5', '6', '7'};
     bool isCorrect = true;
     do {
         srand(time(0));
         int index = rand() % count;
-        int position = positions[index];
-        positions[index] = positions[count-1];
-        positions[count-1] = '\0';
-        --count;
+        char position = positions[index];
+        remove(positions,index,count);
         isCorrect = true;
 
         switch (position) {
             case '0':
-                if (coordinatesP[0]-1 < 0 || coordinatesP[1]-1 < 0) {
+                /*if (coordinatesP[0]-1 < 0 || coordinatesP[1]-1 < 0) {
                     isCorrect = false;
                     break;
-                }
+                }*/
                 newCoordinatesP[0] = coordinatesP[0]-1;
                 newCoordinatesP[1] = coordinatesP[1]-1;
                 break;
             case '1':
-                if (coordinatesP[0]-1 < 0) {
+                /*if (coordinatesP[0]-1 < 0) {
                     isCorrect = false;
                     break;
-                }
+                }*/
                 newCoordinatesP[0] = coordinatesP[0]-1;
                 newCoordinatesP[1] = coordinatesP[1];
                 break;
             case '2':
-                if (coordinatesP[0]-1 < 0 || coordinatesP[1]+1 >= size) {
+                /*if (coordinatesP[0]-1 < 0 || coordinatesP[1]+1 >= size) {
                     isCorrect = false;
                     break;
-                }
+                }*/
                 newCoordinatesP[0] = coordinatesP[0]-1;
                 newCoordinatesP[1] = coordinatesP[1]+1;
                 break;
             case '3':
-                if (coordinatesP[1]-1 < 0) {
+                /*if (coordinatesP[1]-1 < 0) {
                     isCorrect = false;
                     break;
-                }
+                }*/
                 newCoordinatesP[0] = coordinatesP[0];
                 newCoordinatesP[1] = coordinatesP[1]-1;
                 break;
             case '4':
-                if (coordinatesP[1]+1 >= size) {
+                /*if (coordinatesP[1]+1 >= size) {
                     isCorrect = false;
                     break;
-                }
+                }*/
                 newCoordinatesP[0] = coordinatesP[0];
                 newCoordinatesP[1] = coordinatesP[1]+1;
                 break;
             case '5':
-                if (coordinatesP[0]+1 >= size || coordinatesP[1]-1 < 0) {
+                /*if (coordinatesP[0]+1 >= size || coordinatesP[1]-1 < 0) {
                     isCorrect = false;
                     break;
-                }
+                }*/
                 newCoordinatesP[0] = coordinatesP[0]+1;
                 newCoordinatesP[1] = coordinatesP[1]-1;
                 break;
             case '6':
-                if (coordinatesP[0]+1 >= size) {
+                /*if (coordinatesP[0]+1 >= size) {
                     isCorrect = false;
                     break;
-                }
+                }*/
                 newCoordinatesP[0] = coordinatesP[0]+1;
                 newCoordinatesP[1] = coordinatesP[1];
                 break;
             case '7':
-                if (coordinatesP[0]+1 >= size || coordinatesP[1]+1 >= size) {
+                /*if (coordinatesP[0]+1 >= size || coordinatesP[1]+1 >= size) {
                     isCorrect = false;
                     break;
-                }
+                }*/
                 newCoordinatesP[0] = coordinatesP[0]+1;
                 newCoordinatesP[1] = coordinatesP[1]+1;
                 break;

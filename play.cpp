@@ -14,8 +14,9 @@ void play(int size) {
     while(true) {
         switch (isCheckmate(size, board)) {
             case 1:
-                cout << "You won!" << endl;
-                cout << "Moves: " << moves << endl;
+                ++moves;
+                cout << " You won!" << endl;
+                cout << "Moves: " << moves << endl << endl;
                 return;
             case 0:
                 ++moves;
@@ -23,9 +24,8 @@ void play(int size) {
                 Sleep(2000);
                 cout << endl;
                 if(botMove(size, board)){
-                    printBoard(size, board);
                     cout << "You lost!" << endl;
-                    cout << "Moves: " << moves << endl;
+                    cout << "Moves: " << moves << endl << endl;
                     return;
                 }
                 break;
