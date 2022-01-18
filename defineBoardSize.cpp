@@ -9,21 +9,25 @@ int defineBoardSize(){
     cout << "3. 12x12" << endl;
     cout << "Enter your choice:";
 
-    char input[20];
-    cin.getline(input, 20);
+    const int SIZE = 50;
+    char input[SIZE];
+    cin.getline(input, SIZE);
     if (input[0] == '\0') {
-        cin.getline(input, 20);
+        cin.getline(input, SIZE);
     }
     char n = input[0];
-    while (n-'0' < 1 || n-'0' > 3 || input[1]!='\0') {
+
+    //checking for correct input
+    while (n - '0' < 1 || n - '0' > 3 || input[1] != '\0') {
         cout << "Enter a number between 1 and 3:";
-        cin.getline(input, 20);
-        if (input[0] == '\0'){
-            cin.getline(input, 20);
+        cin.getline(input, SIZE);
+        if (input[0] == '\0') {
+            cin.getline(input, SIZE);
         }
         n = input[0];
     }
 
+    //choosing an option
     switch (n) {
         case '2':
             return 10;

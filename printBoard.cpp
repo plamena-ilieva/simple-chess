@@ -10,7 +10,7 @@ void printBoard(int size, vector<vector<char>> &board) {
     }
     cout << endl;
     for (int i = 0; i < size; ++i) {
-        cout << i+1 << (i+1>9?" ":"  ");
+        cout << i + 1 << (i + 1 > 9 ? " " : "  ");
         for (int j = 0; j < size; ++j) {
             cout << board[i][j] << "  ";
         }

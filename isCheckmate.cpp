@@ -7,24 +7,30 @@
 using namespace std;
 
 int isCheckmate(int size, vector<vector<char>> &board) {
+    const int SIZE = 50;
     int *coordinates = new int[2];
     int *coordinatesP = findCoordinates('P', size, board);
+
+    //checking for valid input
     while (true) {
         cout << "Enter your move:";
         char pawn;
         int x = 0;
         int y = 0;
 
-        char input[10];
-        cin.getline(input, 10);
+        char input[SIZE];
+        cin.getline(input, SIZE);
         if (input[0] == '\0'){
-            cin.getline(input, 10);
+            cin.getline(input, SIZE);
         }
 
+        //exit
         if (input[0] == 'X') {
             delete[] coordinates;
             return -1;
         }
+
+        //checking for existing pawns
         if ((input[0] != 'K' && input[0] != '1' && input[0] != '2') ||
             input[1] != ' ') {
             cout << "Enter an existing pawn!" << endl;
@@ -32,19 +38,19 @@ int isCheckmate(int size, vector<vector<char>> &board) {
         }
         pawn = input[0];
 
-        for (int i = 3; input[i-1] != '\0'; ++i) {
-            if (input[i-1] >= '1' && input[i-1] <= '9' && (input[i] == ' ' || input[i] == '\0')) {
+        for (int i = 3; input[i - 1] != '\0'; ++i) {
+            if (input[i - 1] >= '1' && input[i - 1] <= '9' && (input[i] == ' ' || input[i] == '\0')) {
                 if (i == 3) {
-                    x = input[i-1] - '0' - 1;
+                    x = input[i - 1] - '0' - 1;
                 }
                 else {
-                    y = input[i-1] - '0' - 1;
+                    y = input[i - 1] - '0' - 1;
                     break;
                 }
                 i += 1;
             }
-            else if(input[i-1]=='1' && input[i]>='0' && input[i]<='6'){
-                if (i==3) {
+            else if (input[i - 1] == '1' && input[i] >= '0' && input[i] <= '2') {
+                if (i == 3) {
                     x = 10 + (input[i] - '0') - 1;
                 }
                 else {
@@ -62,20 +68,23 @@ int isCheckmate(int size, vector<vector<char>> &board) {
         int newCoordinates[2] = {x,y};
         delete[] coordinates;
         coordinates = findCoordinates(pawn, size, board);
+
+        //checking whether pawn and coordinates exist
         if (coordinates[0] == -1 || pawn == 'P') {
             cout << "Enter an existing pawn!" << endl;
         }
         else if (x < 0 || x >= size || y < 0 || y >= size){
             cout << "Enter existing coordinates!" << endl;
         }
-        else if (((pawn == 'K' && abs(coordinates[0] - x) <= 1 && //correct for king
-                    abs(coordinates[1] - y) <= 1 &&
+        else if (((pawn == 'K' && abs(coordinates[0] - x) <= 1 && //correct coordinates
+                    abs(coordinates[1] - y) <= 1 &&               //for king
                     !(abs(x - coordinatesP[0]) <= 1 &&
                     abs(y - coordinatesP[1]) <= 1)) ||
-                    ((pawn == '1' || pawn == '2') && //correct for rook
+                    ((pawn == '1' || pawn == '2') &&                //correct for rook
                     (coordinates[0] == x || coordinates[1] == y))) &&
                     !containsObstacles(board, coordinates, newCoordinates)) {
-            if (board[x][y]=='P'){
+            //taking the bot's king
+            if (board[x][y] == 'P') {
                 board[coordinates[0]][coordinates[1]] = '_';
                 board[x][y] = pawn;
                 printBoard(size, board);
@@ -84,6 +93,7 @@ int isCheckmate(int size, vector<vector<char>> &board) {
                 delete[] coordinatesP;
                 return 1;
             }
+            //moving the pawn
             board[coordinates[0]][coordinates[1]] = '_';
             board[x][y] = pawn;
             break;

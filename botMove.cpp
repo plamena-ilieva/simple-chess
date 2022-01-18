@@ -13,7 +13,7 @@ void remove(char *positions, int index, int &count) {
     --count;
 }
 
-bool botMove(int size, vector<vector<char>> &board){
+bool botMove(int size, vector<vector<char>> &board) {
     int* coordinates1 = findCoordinates('1', size, board);
     int* coordinates2 = findCoordinates('2', size, board);
     int* coordinatesK = findCoordinates('K', size, board);
@@ -22,21 +22,23 @@ bool botMove(int size, vector<vector<char>> &board){
     char positions[8] = {'0', '1', '2', '3', '4', '5', '6', '7'};
     int count = 8;
 
+    //checking for invalid moves - in the range of the player's king
+    // or out of the board
     if ((abs(coordinatesP[0] + 1 - coordinatesK[0]) <= 1 &&
-         abs(coordinatesP[1] + 1 - coordinatesK[1]) <= 1) ||
-        (coordinatesP[0]+1 >= size || coordinatesP[1]+1 >= size)) {
+            abs(coordinatesP[1] + 1 - coordinatesK[1]) <= 1) ||
+            (coordinatesP[0] + 1 >= size || coordinatesP[1] + 1 >= size)) {
         remove(positions, 7, count);
     }
 
     if ((abs(coordinatesP[0] + 1 - coordinatesK[0]) <= 1 &&
-         abs(coordinatesP[1] - coordinatesK[1]) <= 1) ||
-        (coordinatesP[0] + 1 >= size)) {
+            abs(coordinatesP[1] - coordinatesK[1]) <= 1) ||
+            (coordinatesP[0] + 1 >= size)) {
         remove(positions, 6, count);
     }
 
     if ((abs(coordinatesP[0] + 1 - coordinatesK[0]) <= 1 &&
-         abs(coordinatesP[1] - 1 - coordinatesK[1]) <= 1) ||
-        (coordinatesP[0] + 1 >= size || coordinatesP[1] - 1 < 0)) {
+            abs(coordinatesP[1] - 1 - coordinatesK[1]) <= 1) ||
+            (coordinatesP[0] + 1 >= size || coordinatesP[1] - 1 < 0)) {
         remove(positions, 5, count);
     }
 
@@ -47,29 +49,30 @@ bool botMove(int size, vector<vector<char>> &board){
     }
 
     if ((abs(coordinatesP[0] - coordinatesK[0]) <= 1 &&
-         abs(coordinatesP[1] - 1 - coordinatesK[1]) <= 1) ||
-        (coordinatesP[1] - 1 < 0)) {
+            abs(coordinatesP[1] - 1 - coordinatesK[1]) <= 1) ||
+            (coordinatesP[1] - 1 < 0)) {
         remove(positions, 3, count);
     }
 
     if ((abs(coordinatesP[0] - 1 - coordinatesK[0]) <= 1 &&
-         abs(coordinatesP[1] + 1 - coordinatesK[1]) <= 1) ||
-        (coordinatesP[0] - 1 < 0 || coordinatesP[1] + 1 >= size)) {
+            abs(coordinatesP[1] + 1 - coordinatesK[1]) <= 1) ||
+            (coordinatesP[0] - 1 < 0 || coordinatesP[1] + 1 >= size)) {
         remove(positions, 2, count);
     }
 
     if ((abs(coordinatesP[0] - 1 - coordinatesK[0]) <= 1 &&
-         abs(coordinatesP[1] - coordinatesK[1]) <= 1) ||
-        (coordinatesP[0] - 1 < 0)) {
+            abs(coordinatesP[1] - coordinatesK[1]) <= 1) ||
+            (coordinatesP[0] - 1 < 0)) {
         remove(positions, 1, count);
     }
 
     if ((abs(coordinatesP[0] - 1 - coordinatesK[0]) <= 1 &&
-         abs(coordinatesP[1] - 1 - coordinatesK[1]) <= 1) ||
-        (coordinatesP[0] - 1 < 0 || coordinatesP[1] - 1 < 0)) {
+            abs(coordinatesP[1] - 1 - coordinatesK[1]) <= 1) ||
+            (coordinatesP[0] - 1 < 0 || coordinatesP[1] - 1 < 0)) {
         remove(positions, 0, count);
     }
 
+    //checking for an opportunity to take a player's rook
     if (coordinates1[0] != -1 &&
             (abs(coordinates1[0] - coordinatesP[0]) <= 1 &&
             abs(coordinates1[1] - coordinatesP[1]) <= 1 &&
@@ -112,77 +115,45 @@ bool botMove(int size, vector<vector<char>> &board){
         return false;
     }
 
+    //generating a random move and checking whether a rook can take
+    //bot's king
     int* newCoordinatesP = new int[2];
-    bool isCorrect = true;
     do {
         srand(time(0));
         int index = rand() % count;
         char position = positions[index];
         remove(positions,index,count);
-        isCorrect = true;
 
         switch (position) {
             case '0':
-                /*if (coordinatesP[0]-1 < 0 || coordinatesP[1]-1 < 0) {
-                    isCorrect = false;
-                    break;
-                }*/
                 newCoordinatesP[0] = coordinatesP[0]-1;
                 newCoordinatesP[1] = coordinatesP[1]-1;
                 break;
             case '1':
-                /*if (coordinatesP[0]-1 < 0) {
-                    isCorrect = false;
-                    break;
-                }*/
                 newCoordinatesP[0] = coordinatesP[0]-1;
                 newCoordinatesP[1] = coordinatesP[1];
                 break;
             case '2':
-                /*if (coordinatesP[0]-1 < 0 || coordinatesP[1]+1 >= size) {
-                    isCorrect = false;
-                    break;
-                }*/
                 newCoordinatesP[0] = coordinatesP[0]-1;
                 newCoordinatesP[1] = coordinatesP[1]+1;
                 break;
             case '3':
-                /*if (coordinatesP[1]-1 < 0) {
-                    isCorrect = false;
-                    break;
-                }*/
                 newCoordinatesP[0] = coordinatesP[0];
                 newCoordinatesP[1] = coordinatesP[1]-1;
                 break;
             case '4':
-                /*if (coordinatesP[1]+1 >= size) {
-                    isCorrect = false;
-                    break;
-                }*/
                 newCoordinatesP[0] = coordinatesP[0];
                 newCoordinatesP[1] = coordinatesP[1]+1;
                 break;
             case '5':
-                /*if (coordinatesP[0]+1 >= size || coordinatesP[1]-1 < 0) {
-                    isCorrect = false;
-                    break;
-                }*/
                 newCoordinatesP[0] = coordinatesP[0]+1;
                 newCoordinatesP[1] = coordinatesP[1]-1;
                 break;
             case '6':
-                /*if (coordinatesP[0]+1 >= size) {
-                    isCorrect = false;
-                    break;
-                }*/
                 newCoordinatesP[0] = coordinatesP[0]+1;
                 newCoordinatesP[1] = coordinatesP[1];
                 break;
             case '7':
-                /*if (coordinatesP[0]+1 >= size || coordinatesP[1]+1 >= size) {
-                    isCorrect = false;
-                    break;
-                }*/
                 newCoordinatesP[0] = coordinatesP[0]+1;
                 newCoordinatesP[1] = coordinatesP[1]+1;
                 break;
@@ -197,9 +168,9 @@ bool botMove(int size, vector<vector<char>> &board){
                 !containsObstacles(board, coordinates1, coordinatesP)) ||
             (newCoordinatesP[0] == coordinates2[0] ||
                 newCoordinatesP[1] == coordinates2[1] &&
-                !containsObstacles(board, coordinates2, coordinatesP))  ||
-                !isCorrect));
+                !containsObstacles(board, coordinates2, coordinatesP))));
 
+    //moving bot's king
     board[coordinatesP[0]][coordinatesP[1]]='_';
     board[newCoordinatesP[0]][newCoordinatesP[1]]='P';
     printBoard(size, board);

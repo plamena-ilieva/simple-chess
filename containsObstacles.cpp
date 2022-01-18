@@ -3,7 +3,8 @@
 using namespace std;
 
 bool containsObstacles(vector<vector<char>> &board, const int* startCoordinates, const int* endCoordinates) {
-    if (startCoordinates[0] == endCoordinates[0]){
+    //checking for obstacles in the current row
+    if (startCoordinates[0] == endCoordinates[0]) {
         int min = (startCoordinates[1] < endCoordinates[1] ? startCoordinates[1] + 1 : endCoordinates[1]);
         int max = (startCoordinates[1] > endCoordinates[1] ? startCoordinates[1] - 1 : endCoordinates[1]);
         for (int i = min; i <= max; ++i) {
@@ -12,6 +13,8 @@ bool containsObstacles(vector<vector<char>> &board, const int* startCoordinates,
             }
         }
     }
+
+    //checking for obstacles in the current column
     else if (startCoordinates[1] == endCoordinates[1]) {
         int min = (startCoordinates[0] < endCoordinates[0] ? startCoordinates[0] + 1 : endCoordinates[0]);
         int max = (startCoordinates[0] > endCoordinates[0] ? startCoordinates[0] - 1 : endCoordinates[0]);

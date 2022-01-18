@@ -14,5 +14,6 @@ int* findCoordinates(char pawn, int size, vector<vector<char>> &board) {
             }
         }
     }
+    //if pawn is not found - returns (-1, -1)
     return coordinates;
 }
