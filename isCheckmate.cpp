@@ -1,3 +1,19 @@
+/**
+*
+* Solution to course project # 12
+* Introduction to programming course
+* Faculty of Mathematics and Informatics of Sofia University
+* Winter semester 2021/2022
+*
+* @author Plamena Ilieva
+* @idnumber 6MI0600020
+* @compiler GCC
+*
+* <cpp file with a function that validates a player's input, realizes it and returns whether
+ * the player has won>
+*
+*/
+
 #include <iostream>
 #include <vector>
 #include "isCheckmate.h"

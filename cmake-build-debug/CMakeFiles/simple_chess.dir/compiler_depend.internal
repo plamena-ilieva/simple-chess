@@ -433,11 +433,6 @@ CMakeFiles/simple_chess.dir/generateBoard.cpp.obj
  C:/Program Files/JetBrains/CLion 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/vector.tcc
  C:/Users/plami/CLionProjects/simple-chess/printBoard.h
  C:/Program Files/JetBrains/CLion 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ctime
- C:/Program Files/JetBrains/CLion 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/fstream
- C:/Program Files/JetBrains/CLion 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/codecvt.h
- C:/Program Files/JetBrains/CLion 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h
- C:/Program Files/JetBrains/CLion 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h
- C:/Program Files/JetBrains/CLion 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/fstream.tcc
 
 CMakeFiles/simple_chess.dir/isCheckmate.cpp.obj
  C:/Users/plami/CLionProjects/simple-chess/isCheckmate.cpp

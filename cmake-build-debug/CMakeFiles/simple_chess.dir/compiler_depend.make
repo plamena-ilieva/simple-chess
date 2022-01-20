@@ -427,12 +427,7 @@ CMakeFiles/simple_chess.dir/generateBoard.cpp.obj: ../generateBoard.cpp \
   C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_bvector.h \
   C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/vector.tcc \
   ../printBoard.h \
-  C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ctime \
-  C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/fstream \
-  C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/codecvt.h \
-  C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
-  C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
-  C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/fstream.tcc
+  C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ctime
 
 CMakeFiles/simple_chess.dir/isCheckmate.cpp.obj: ../isCheckmate.cpp \
   C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/iostream \
@@ -1793,26 +1788,6 @@ C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/x86_64-w64-mingw32/include
 
 ../generateBoard.h:
 
-C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/avx512erintrin.h:
-
-C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/fstream:
-
-C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/x86_64-w64-mingw32/include/rpcnterr.h:
-
-C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/lwpintrin.h:
-
-C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/codecvt.h:
-
-C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/x86_64-w64-mingw32/include/rpcasync.h:
-
-C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h:
-
-C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/cetintrin.h:
-
-C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h:
-
-C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/fstream.tcc:
-
 ../isCheckmate.h:
 
 ../main.cpp:
@@ -1861,6 +1836,8 @@ C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32
 
 C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/bmi2intrin.h:
 
+C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/cetintrin.h:
+
 C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/cldemoteintrin.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/clflushoptintrin.h:
@@ -1876,6 +1853,10 @@ C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32
 C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/fxsrintrin.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/lzcntintrin.h:
+
+C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/x86_64-w64-mingw32/include/rpcnterr.h:
+
+C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/lwpintrin.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/movdirintrin.h:
 
@@ -1918,6 +1899,8 @@ C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32
 C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/avx2intrin.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/avx512fintrin.h:
+
+C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/avx512erintrin.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/avx512pfintrin.h:
 
@@ -2068,6 +2051,8 @@ C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/x86_64-w64-mingw32/include
 C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/x86_64-w64-mingw32/include/rpcdcep.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/x86_64-w64-mingw32/include/rpcnsi.h:
+
+C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/x86_64-w64-mingw32/include/rpcasync.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/x86_64-w64-mingw32/include/shellapi.h:
 

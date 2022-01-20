@@ -9,7 +9,7 @@
 * @idnumber 6MI0600020
 * @compiler GCC
 *
-* <main file>
+* <file with the main function>
 *
 */
 
