@@ -22,7 +22,7 @@
 
 using namespace std;
 
-void generateBoard(int size, vector<vector<char>> &board) {
+void generateBoard (int size, vector<vector<char>> &board) {
 
     //generating an empty board
     for (int i = 0; i < size; ++i) {
@@ -44,22 +44,32 @@ void generateBoard(int size, vector<vector<char>> &board) {
     int diffBetweenKings = abs(coordinates[1] - coordinates[0]);
     while (diffBetweenKings <= 1 || diffBetweenKings == size ||
            diffBetweenKings == size + 1 || diffBetweenKings == size - 1) {
-        coordinates[1] = rand() % (size*size);
-        diffBetweenKings = abs(coordinates[1]-coordinates[0]);
+        coordinates[1] = rand() % (size * size);
+        diffBetweenKings = abs(coordinates[1] - coordinates[0]);
     }
 
     //checking whether a rook can take the bot's king after the generating
     //or whether the coordinates are the same
-    while (coordinates[2] / size == coordinates[0] / size ||
-               coordinates[2] % size == coordinates[0] % size ||
-               coordinates[1] == coordinates[2]) {
-            coordinates[2] = rand() % (size*size);
+    //or whether the bot's king can take a rook
+    int diffBetweenKingAnd1 = abs(coordinates[2] - coordinates[0]);
+    while ((coordinates[2] / size == coordinates[0] / size ||
+            coordinates[2] % size == coordinates[0] % size ||
+            coordinates[1] == coordinates[2]) ||
+            (diffBetweenKingAnd1 <= 1 || diffBetweenKingAnd1 == size ||
+            diffBetweenKingAnd1 == size + 1 || diffBetweenKingAnd1 == size - 1)) {
+        coordinates[2] = rand() % (size * size);
+        diffBetweenKingAnd1 = abs(coordinates[2] - coordinates[0]);
     }
-    while (coordinates[3] / size == coordinates[0] / size ||
+
+    int diffBetweenKingAnd2 = abs(coordinates[3] - coordinates[0]);
+    while ((coordinates[3] / size == coordinates[0] / size ||
             coordinates[3] % size == coordinates[0] % size ||
             coordinates[1] == coordinates[3] ||
-            coordinates[2] == coordinates[3]) {
-        coordinates[3] = rand() % (size*size);
+            coordinates[2] == coordinates[3]) ||
+            (diffBetweenKingAnd2 <= 1 || diffBetweenKingAnd2 == size ||
+            diffBetweenKingAnd2 == size + 1 || diffBetweenKingAnd2 == size - 1)) {
+        coordinates[3] = rand() % (size * size);
+        diffBetweenKingAnd2 = abs(coordinates[3] - coordinates[0]);
     }
 
     char pawns[4] = {'P', 'K', '1', '2'};

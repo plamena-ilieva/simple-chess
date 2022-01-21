@@ -22,7 +22,7 @@
 #include "printBoard.h"
 using namespace std;
 
-int isCheckmate(int size, vector<vector<char>> &board) {
+int isCheckmate (int size, vector<vector<char>> &board) {
     const int SIZE = 50;
     int *coordinates = new int[2];
     int *coordinatesP = findCoordinates('P', size, board);
@@ -31,8 +31,8 @@ int isCheckmate(int size, vector<vector<char>> &board) {
     while (true) {
         cout << "Enter your move:";
         char pawn;
-        int x = 0;
-        int y = 0;
+        int x = -1;
+        int y = -1;
 
         char input[SIZE];
         cin.getline(input, SIZE);
@@ -47,9 +47,12 @@ int isCheckmate(int size, vector<vector<char>> &board) {
         }
 
         //checking for existing pawns
-        if ((input[0] != 'K' && input[0] != '1' && input[0] != '2') ||
-            input[1] != ' ') {
+        if (input[0] != 'K' && input[0] != '1' && input[0] != '2') {
             cout << "Enter an existing pawn!" << endl;
+            continue;
+        }
+        if (input[1] != ' ') {
+            cout << "Enter existing coordinates!" << endl;
             continue;
         }
         pawn = input[0];
@@ -75,7 +78,7 @@ int isCheckmate(int size, vector<vector<char>> &board) {
                 }
                 i += 2;
             }
-            else{
+            else {
                 x = -1;
                 break;
             }

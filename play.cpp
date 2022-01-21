@@ -22,12 +22,12 @@
 #include "botMove.h"
 using namespace std;
 
-void play(int size) {
+void play (int size) {
     vector<vector<char>> board;
     generateBoard(size, board);
     int moves = 0;
 
-    while(true) {
+    while (true) {
         switch (isCheckmate(size, board)) {
             //if the player has won
             case 1:

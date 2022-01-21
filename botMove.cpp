@@ -22,13 +22,13 @@
 #include <ctime>
 using namespace std;
 
-void remove(char *positions, int index, int &count) {
+void remove (char *positions, int index, int &count) {
     positions[index] = positions[count-1];
     positions[count-1] = '\0';
     --count;
 }
 
-bool botMove(int size, vector<vector<char>> &board) {
+bool botMove (int size, vector<vector<char>> &board) {
     int* coordinates1 = findCoordinates('1', size, board);
     int* coordinates2 = findCoordinates('2', size, board);
     int* coordinatesK = findCoordinates('K', size, board);
@@ -137,7 +137,7 @@ bool botMove(int size, vector<vector<char>> &board) {
         srand(time(0));
         int index = rand() % count;
         char position = positions[index];
-        remove(positions,index,count);
+        remove(positions, index, count);
 
         switch (position) {
             case '0':
@@ -176,8 +176,8 @@ bool botMove(int size, vector<vector<char>> &board) {
                 break;
         }
 
-    } while (count > 0 && ((abs(coordinatesK[0]-newCoordinatesP[0])<=1 &&
-                abs(coordinatesK[1]-newCoordinatesP[1])<=1) ||
+    } while (count > 0 && ((abs(coordinatesK[0] - newCoordinatesP[0]) <= 1 &&
+                abs(coordinatesK[1] - newCoordinatesP[1]) <= 1) ||
             (newCoordinatesP[0] == coordinates1[0] ||
                 newCoordinatesP[1] == coordinates1[1] &&
                 !containsObstacles(board, coordinates1, coordinatesP)) ||
