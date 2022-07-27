@@ -178,11 +178,11 @@ bool botMove (int size, vector<vector<char>> &board) {
 
     } while (count > 0 && ((abs(coordinatesK[0] - newCoordinatesP[0]) <= 1 &&
                 abs(coordinatesK[1] - newCoordinatesP[1]) <= 1) ||
-            (newCoordinatesP[0] == coordinates1[0] ||
-                newCoordinatesP[1] == coordinates1[1] &&
+            ((newCoordinatesP[0] == coordinates1[0] ||
+                newCoordinatesP[1] == coordinates1[1]) &&
                 !containsObstacles(board, coordinates1, coordinatesP)) ||
-            (newCoordinatesP[0] == coordinates2[0] ||
-                newCoordinatesP[1] == coordinates2[1] &&
+            ((newCoordinatesP[0] == coordinates2[0] ||
+                newCoordinatesP[1] == coordinates2[1]) &&
                 !containsObstacles(board, coordinates2, coordinatesP))));
 
     //moving bot's king
