@@ -1,3 +1,0 @@
-C:/Users/plami/CLionProjects/simple-chess/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/plami/CLionProjects/simple-chess/cmake-build-debug/CMakeFiles/simple_chess.dir
-C:/Users/plami/CLionProjects/simple-chess/cmake-build-debug/CMakeFiles/rebuild_cache.dir
